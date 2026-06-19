@@ -1,32 +1,62 @@
-/* Chặng 1: liên kết CSS ngoài và selector cơ bản */
+/* Chặng 1 & 2: Selector và cấu trúc cơ bản */
 * {
     box-sizing: border-box; 
 }
 body {
     margin: 0; 
-    font-family: 'Segoe UI', Arial, sans-serif; 
-    color: #f3f4f6; /* Chữ sáng trên nền tối */
-    background-color: #0b0f19; /* Nền tối đậm chất gaming */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    font-size: 16px;
+    line-height: 1.6; 
+    color: #f3f4f6; 
+    background-color: #0b0f19; 
 }
-h1, h2, h3, p {
+
+/* Định dạng Typography đồng bộ hệ thống */
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 800; 
+    letter-spacing: -0.02em; 
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    border-left: 4px solid var(--primary); 
+    padding-left: 12px;
+}
+
+p {
     margin-top: 0; 
+    margin-bottom: 16px;
+    text-align: justify; 
 }
+
 a {
-    color: #00f2fe; /* Màu xanh neon cho liên kết */
+    color: #00f2fe; 
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 a:hover {
     color: #ff0055;
 }
 
-/* Chặng 2: class, id, selector kết hợp và cascade */
+/* Chặng 3 & 4: Màu sắc, Nền và Tinh chỉnh Typography nâng cao */
+:root {
+    --primary: #ff0055;   
+    --accent: #00f2fe;    
+    --soft: #1f2937;      
+    --dark: #0b0f19;      
+}
+
 .site-header {
     padding: 18px 8%; 
     background-color: #111827; 
-    border-bottom: 2px solid #ff0055; /* Đường viền đỏ làm điểm nhấn */
+    border-bottom: 2px solid var(--primary); 
 }
 .brand {
-    font-weight: 800; 
+    font-weight: 900; 
     font-size: 24px;
     color: #ffffff;
     text-transform: uppercase;
@@ -34,43 +64,37 @@ a:hover {
 }
 .main-nav a {
     margin-right: 16px; 
-    text-decoration: none; 
     font-weight: 700;
 }
 
-#main-title {
-    color: #ffffff;
-    font-size: 3rem;
-    text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
-}
-
-/* Chặng 3: màu sắc, nền và phong cách nhận diện */
-:root {
-    --primary: #ff0055;   /* Màu chính: Đỏ rực lửa */
-    --accent: #00f2fe;    /* Màu nhấn: Xanh Cyan Neon */
-    --soft: #1f2937;      /* Nền phụ: Xám tối nhẹ */
-    --dark: #0b0f19;      /* Nền chính sâu thẳm */
-}
-
+/* Hero Section */
 .hero {
     padding: 100px 8%; 
     color: white; 
-    /* Gradient chéo từ đỏ rực sang tím đậm huyền bí */
     background: linear-gradient(135deg, var(--primary), #3b0764); 
     text-align: left;
 }
 
+#main-title {
+    font-size: 3.5rem; 
+    text-shadow: 0 0 12px rgba(255, 0, 85, 0.6);
+    margin-bottom: 16px;
+}
+
 .eyebrow {
+    font-size: 0.9rem;
     color: var(--accent);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
 .intro {
-    font-size: 1.2rem;
-    max-width: 600px;
-    line-height: 1.6;
+    font-size: 1.25rem; 
+    max-width: 650px;
+    line-height: 1.5;
+    text-align: left; 
 }
 
 .primary-button {
@@ -81,27 +105,56 @@ a:hover {
     font-weight: 800;
     text-transform: uppercase;
     border-radius: 8px; 
-    text-decoration: none; 
     box-shadow: 0 4px 14px rgba(0, 242, 254, 0.4);
 }
-
 .primary-button:hover {
     background-color: #ffffff;
     color: var(--primary);
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
 }
 
-.about-section {
+/* Sections */
+.section {
     padding: 60px 8%;
+}
+.about-section {
     background-color: var(--soft);
 }
 
+.topic-list {
+    padding-left: 20px;
+}
 .topic-list li {
     margin-bottom: 12px;
-    line-height: 1.5;
 }
 
+.story-section {
+    background-color: var(--dark);
+}
+
+/* ĐÃ THÊM CLASS .lead THEO YÊU CẦU */
+.lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* ĐÃ SỬA THÀNH SELECTOR THẺ BLOCKQUOTE TRỰC TIẾP */
+blockquote {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #111827;
+    border-top: 1px solid #374151;
+    border-bottom: 1px solid #374151;
+    font-style: italic; 
+    font-size: 1.3rem;
+    color: var(--accent);
+    text-align: center; 
+    line-height: 1.4;
+}
+
+/* Style Guide Swatches */
 .swatches {
     display: flex; 
     gap: 12px; 
@@ -110,19 +163,10 @@ a:hover {
 .swatch {
     padding: 18px; 
     border-radius: 8px; 
-    color: white; 
     font-weight: bold;
     flex: 1;
     text-align: center;
 }
-.swatch-primary { 
-    background-color: var(--primary); 
-}
-.swatch-accent { 
-    background-color: var(--accent); 
-    color: #0b0f19;
-}
-.swatch-soft { 
-    background-color: var(--soft); 
-    border: 1px solid #374151;
-}
+.swatch-primary { background-color: var(--primary); }
+.swatch-accent { background-color: var(--accent); color: #0b0f19;}
+.swatch-soft { background-color: var(--soft); border: 1px solid #374151;}
