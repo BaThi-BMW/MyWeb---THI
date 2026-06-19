@@ -1,18 +1,18 @@
-/* --- KHỞI TẠO BIẾN MÀU SẮC & RESET BOX MODEL --- */
+/* --- 1. KHỞI TẠO BIẾN MÀU SẮC & RESET BOX MODEL --- */
 :root {
-  --primary: #1e3a8a;       /* Màu chính */
-  --accent: #f59e0b;        /* Màu nhấn */
-  --dark: #0f172a;          /* Màu tối */
-  --light-bg: #f8fafc;      /* Màu nền nhẹ */
+  --primary: #1e3a8a;
+  --accent: #f59e0b;
+  --dark: #0f172a;
+  --light-bg: #f8fafc;
 }
 
 * {
-  box-sizing: border-box;   /* Đảm bảo kích thước card chuẩn xác gồm cả padding/border */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* --- ĐỊNH DẠNG BODY & TYPOGRAPHY --- */
+/* --- 2. BODY & ĐỊNH DẠNG TYPOGRAPHY --- */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #334155;
@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- HEADER & THANH ĐIỀU HƯỚNG --- */
+/* --- 3. HEADER & THANH ĐIỀU HƯỚNG --- */
 .site-header {
   background-color: var(--dark);
   padding: 16px 24px;
@@ -42,33 +42,36 @@ body {
 
 .main-nav a {
   color: #94a3b8;
-  text-decoration: none;    /* Bỏ gạch chân link điều hướng */
+  text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
+/* Trạng thái Hover cho link điều hướng */
 .main-nav a:hover {
   color: #ffffff;
 }
 
-/* --- HERO SECTION --- */
+/* --- 4. HERO SECTION --- */
 .hero {
-  background: linear-gradient(135deg, var(--primary), var(--dark)); /* Nền chuyển sắc thể thao */
+  background: linear-gradient(135deg, var(--primary), var(--dark));
   color: #ffffff;
   padding: 80px 24px;
-  text-align: center;       /* Căn giữa nội dung hero */
+  text-align: center;
 }
 
 .hero h1 {
   font-size: 42px;
   margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .lead {
   font-size: 18px;
   max-width: 700px;
   margin: 0 auto 24px auto;
+  line-height: 1.6;
 }
 
 .primary-button {
@@ -79,9 +82,16 @@ body {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* --- BỐ CỤC CHUNG CHO CÁC SECTION --- */
+/* Trạng thái Hover cho nút bấm */
+.primary-button:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+}
+
+/* --- 5. BỐ CỤC CHUNG CHO CÁC SECTION --- */
 .section {
   padding: 60px 24px;
   max-width: 1100px;
@@ -92,6 +102,7 @@ body {
   font-size: 28px;
   color: var(--dark);
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .topic-list {
@@ -112,7 +123,7 @@ body {
   border-radius: 8px;
 }
 
-/* Khối trích dẫn câu chuyện */
+/* Khối trích dẫn (Blockquote) */
 blockquote {
   font-style: italic;
   border-left: 4px solid var(--accent);
@@ -120,13 +131,12 @@ blockquote {
   margin: 20px 0;
   font-size: 20px;
   color: var(--primary);
+  text-align: left;
 }
 
-/* =======================================================
-   CHẶNG 5: BOX MODEL & CARD NỘI BẬT (GIỮ NGUYÊN CODE CỦA BẠN)
-   ======================================================= */
+/* --- 6. KHỐI CARD NỔI BẬT --- */
 .card-row {
-  display: block; 
+  display: block;
 }
 
 .feature-card {
@@ -135,8 +145,8 @@ blockquote {
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-  overflow: hidden; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
@@ -144,19 +154,53 @@ blockquote {
   box-shadow: 0 20px 35px rgba(15, 23, 42, 0.12);
 }
 
-.card-image img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover; 
-  display: block;
-}
-
 .card-content {
   padding: 24px;
 }
 
 .card-content h3 {
-  font-size: 22px;
   margin-bottom: 12px;
+  font-size: 22px;
   color: var(--dark);
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* --- 7. ĐỊNH DẠNG HÌNH ẢNH RESPONSIVE & THƯ VIỆN --- */
+img {
+  max-width: 100%;
+  height: auto; /* Bắt buộc để ảnh co giãn tự động */
+  display: block;
+  border-radius: 8px;
+}
+
+.gallery-container {
+  display: block;
+}
+
+figure {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+figure:hover {
+  transform: scale(1.01);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+  font-style: italic;
 }
