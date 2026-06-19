@@ -3,105 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thể Thao & Esports - Chặng 6</title>
+  <title>MyWeb - Chặng 7: Flexbox Layout</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-container">
-      <div id="main-title">Esports Arena</div>
-      <nav class="main-nav">
-        <a href="#about">Giới thiệu</a>
-        <a href="#story">Câu chuyện</a>
-        <a href="#features">Nổi bật</a>
-        <a href="#gallery">Thư viện</a>
-      </nav>
-    </div>
+  <header class="site-header" id="top">
+    <div class="brand">Esports Arena</div>
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <a href="#hero">Trang chủ</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#gallery">Thư viện</a>
+      <a href="#layout">Bình luận</a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Hành trình xây dựng MyWeb</h1>
-        <p class="lead">Khám phá thế giới Thể thao điện tử đỉnh cao, nơi đam mê biến thành những trận đấu huyền thoại.</p>
-        <a href="#about" class="primary-button">Khám phá ngay</a>
-      </div>
+    <section class="hero" id="hero">
+      <p class="eyebrow">Website cá nhân về Thể Thao Điện Tử</p>
+      <h1 id="main-title">Hành trình xây dựng MyWeb</h1>
+      <p class="intro">Khám phá thế giới Thể thao điện tử đỉnh cao, nơi đam mê biến thành những trận đấu huyền thoại và những nhà vô địch thực thụ.</p>
+      <a class="primary-button" href="#about">Khám phá chủ đề</a>
     </section>
 
     <section class="section about-section" id="about">
       <h2>Giới thiệu chủ đề</h2>
-      <p>Thể thao điện tử (Esports) không chỉ đơn thuần là giải trí, mà đã vươn tầm trở thành một ngành công nghiệp tỷ đô với các giải đấu chuyên nghiệp quy mô toàn cầu.</p>
-      <p>Website này được xây dựng nhằm đem đến cái nhìn toàn diện về lịch sử, tinh thần đồng đội và bản lĩnh của các tuyển thủ trên đấu trường quốc tế.</p>
+      <p>Thể thao điện tử (Esports) ngày nay không chỉ là giải trí mà đã trở thành một ngành công nghiệp tỷ đô đầy tính cạnh tranh với hàng triệu người theo dõi trên toàn cầu.</p>
+      <p>Website này được xây dựng để mang lại cái nhìn toàn diện về tinh thần đồng đội, bản lĩnh thi đấu và vinh quang rực rỡ của các tuyển thủ chuyên nghiệp.</p>
       <ul class="topic-list">
-        <li>Điểm nổi bật về chiến thuật đỉnh cao trong từng trận đấu.</li>
-        <li>Hình ảnh minh họa chân thực từ các giải đấu lớn.</li>
-        <li>Phong cách thiết kế mạnh mẽ, đậm chất gaming và công nghệ.</li>
+        <li>Điểm nổi bật về chiến thuật đỉnh cao và tư duy cấm chọn.</li>
+        <li>Hình ảnh minh họa chân thực từ các giải đấu Esports lớn.</li>
+        <li>Phong cách thiết kế mạnh mẽ, hiện đại và đậm chất gaming.</li>
       </ul>
     </section>
 
-    <section class="section" id="style-guide">
+    <section class="section style-guide" id="style-guide">
       <h2>Bảng phong cách</h2>
       <div class="swatches">
-        <div class="swatch-item">Màu chính</div>
-        <div class="swatch-item">Màu nhấn</div>
-        <div class="swatch-item">Nền nhẹ</div>
+        <div class="swatch swatch-primary">Màu chính</div>
+        <div class="swatch swatch-accent">Màu nhấn</div>
+        <div class="swatch swatch-soft">Nền nhẹ</div>
       </div>
     </section>
 
     <section class="section story-section" id="story">
       <h2>Câu chuyện chính</h2>
       <p class="lead">Đoạn mở đầu cần có giọng văn rõ ràng, dễ đọc và phù hợp với người xem mục tiêu.</p>
-      <blockquote id="story-quote">
-        "Một website tốt không chỉ đẹp, mà còn dễ đọc, dễ dùng và nhất quán."
-      </blockquote>
+      <blockquote id="story-quote">"Một website tốt không chỉ đẹp, mà còn dễ đọc, dễ dùng và nhất quán."</blockquote>
     </section>
 
     <section class="section feature-section" id="features">
       <h2>Nội dung nổi bật</h2>
       <div class="card-row">
         <article class="feature-card">
-          <div class="card-content">
-            <h3>Esports Là Gì?</h3>
-            <p>Tìm hiểu về hành trình phát triển của Thể thao điện tử từ những giải đấu nhỏ đến những đấu trường quốc tế rực lửa.</p>
-          </div>
+          <h3>Hành Trình Esports</h3>
+          <p>Tìm hiểu lịch sử phát triển từ những phòng máy nhỏ đến đấu trường quốc tế rực rỡ.</p>
         </article>
-
         <article class="feature-card">
-          <div class="card-content">
-            <h3>Đấu Trường Danh Vọng</h3>
-            <p>Chiêm ngưỡng chiếc cúp vô địch danh giá phát sáng dưới ánh đèn sân khấu – mục tiêu tối thượng của mọi tuyển thủ.</p>
-          </div>
+          <h3>Đấu Trường Danh Vọng</h3>
+          <p>Nơi vinh danh những đội tuyển xuất sắc và bản lĩnh kiên cường qua từng mùa giải.</p>
         </article>
-
         <article class="feature-card">
-          <div class="card-content">
-            <h3>Tinh Thần Đồng Đội</h3>
-            <p>Esports không chỉ là kỹ năng cá nhân, đó còn là sự gắn kết, chiến thuật đỉnh cao và bản lĩnh của một tập thể.</p>
-          </div>
+          <h3>Chiến Thuật Bậc Thầy</h3>
+          <p>Phân tích các bước di chuyển, tư duy chiến thuật làm nên chiến thắng kinh điển.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="gallery">
-      <h2>Thư viện ảnh Esports</h2>
-      <div class="gallery-container">
-        
+    <section class="section gallery-section" id="gallery">
+      <h2>Thư viện ảnh</h2>
+      <div class="image-strip">
         <figure>
           <img src="../img/hero.jpg" alt="Ảnh nền giải đấu Esports rực lửa và thể thao sôi động">
-          <figcaption>Đấu trường rực lửa với hàng vạn khán giả cuồng nhiệt</figcaption>
+          <figcaption>Đấu trường rực lửa với hàng vạn khán giả</figcaption>
         </figure>
-
         <figure>
-          <img src="../img/esports-la-gi-1.jpg" alt="Chi tiết trận đấu căng thẳng">
-          <figcaption>Sự tập trung cao độ của các tuyển thủ chuyên nghiệp</figcaption>
+          <img src="../img/esports-la-gi-1.jpg" alt="Ảnh chiếc cúp vô địch danh giá phát sáng dưới ánh đèn sân khấu">
+          <figcaption>Chiếc cúp vô địch danh giá phát sáng</figcaption>
         </figure>
-
         <figure>
-          <img src="../img/esports-trophy.jpg" alt="Chi tiết chiếc cúp vô địch danh giá">
-          <figcaption>Chiếc cúp vô địch phát sáng dưới ánh đèn sân khấu</figcaption>
+          <img src="../img/esports-trophy.jpg" alt="Ảnh tuyển thủ cùng với cúp vô địch thế giới">
+          <figcaption>Huyền thoại Faker nâng cao cúp vô địch thế giới</figcaption>
         </figure>
+      </div>
+    </section>
 
+    <section class="section layout-section" id="layout">
+      <h2>Bố cục hai vùng bằng Flexbox</h2>
+      <div class="content-layout">
+        <article class="main-content">
+          <h3>Nội dung chính</h3>
+          <p>Trình bày thông tin quan trọng nhất của website. Thể thao điện tử ngày càng khẳng định vị thế vững chắc khi các tuyển thủ tài năng luôn cống hiến hết mình vì màu cờ sắc áo.</p>
+          <p>Hành trình của họ truyền cảm hứng cho hàng triệu khán giả trẻ, khẳng định bản lĩnh của một thế hệ mới kiên cường.</p>
+        </article>
+        <aside class="side-panel">
+          <h3>Thông tin phụ</h3>
+          <p>Ghi chú, liên kết hoặc dữ liệu ngắn.</p>
+        </aside>
       </div>
     </section>
   </main>
