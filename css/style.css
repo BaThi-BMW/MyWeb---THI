@@ -1,1 +1,29 @@
+/* Chặng 1: liên kết CSS ngoài và selector cơ bản */
+* {
+    box-sizing: border-box; 
+}
 
+body {
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #e2e8f0; /* Chữ màu xám sáng nhẹ mắt */
+    background-color: #0f172a; /* Nền xanh đen đậm chất Esports */
+}
+
+h1, h2, h3, p {
+    margin-top: 0; 
+    line-height: 1.6;
+}
+
+a {
+    color: #38bdf8; /* Màu xanh Cyan nổi bật cho các liên kết */
+    text-decoration: none; 
+}
+
+/* Định dạng cơ bản cho các khối nội dung mới */
+.content-block {
+    padding: 20px;
+    margin: 15px 0;
+    background-color: #1e293b; /* Nền khối sáng hơn nền body */
+    border-radius: 8px;
+}
