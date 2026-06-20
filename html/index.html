@@ -16,16 +16,14 @@
             <a href="#features">Tính năng</a>
             <a href="#portfolio">Thư viện</a>
             <a href="#style-guide">Style Guide</a>
-            <a href="#contact">Liên hệ</a>
         </nav>
     </header>
 
     <main>
-        
         <section class="hero" id="hero">
             <p class="eyebrow">Đam mê - Thử thách - Vinh quang</p>
             <h1 id="main-title">Thế Giới Thể Thao Điện Tử</h1>
-            <p class="lead">Nơi cập nhật những giải đấu rực lửa, khoảnh khắc xuất thần và xu hướng công nghệ mới nhất trong thế giới Esports toàn cầu.</p>
+            <p class="intro">Nơi cập nhật những giải đấu rực lửa, khoảnh khắc xuất thần và xu hướng công nghệ mới nhất trong thế giới Esports toàn cầu.</p>
             <a class="primary-button" href="#about">Khám phá ngay</a>
             
             <figure class="hero-figure">
@@ -51,7 +49,7 @@
 
                 <aside class="side-panel" id="story">
                     <h3>Câu chuyện của chúng tôi</h3>
-                    <blockquote>
+                    <blockquote class="lead">
                         "Hành trình vạn dặm của một tuyển thủ chuyên nghiệp bắt đầu từ những trận rank thức xuyên đêm, nơi ranh giới giữa kẻ bại trận và huyền thoại chỉ cách nhau 1 phần nghìn giây bấm chuột."
                     </blockquote>
                 </aside>
@@ -81,28 +79,40 @@
 
         <section class="section portfolio-section" id="portfolio">
             <h2>Thư viện Portfolio</h2>
-            <p class="lead">Những khoảnh khắc ấn tượng và các dự án truyền thông nổi bật của EsportsZone.</p>
-            
             <div class="portfolio-grid">
-                <div class="portfolio-item featured">
-                    <div class="item-badge">HOT</div>
-                    <div class="item-content">
+                
+                <figure class="portfolio-item featured">
+                    <img src="../img/esports-la-gi-1.jpg" alt="Ảnh nền giải đấu Esports rực lửa và thể thao sôi động">
+                    <figcaption class="item-content">
                         <span class="item-category">Giải đấu</span>
                         <h4 class="item-title">Chung Kết Thế Giới 2026</h4>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="item-content">
-                        <span class="item-category">Gaming Gear</span>
-                        <h4 class="item-title">Đánh giá Bàn phím Cơ Custom</h4>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="item-content">
-                        <span class="item-category">Đội tuyển</span>
-                        <h4 class="item-title">Phỏng vấn Đương kim Vô địch</h4>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="portfolio-item">
+                    <img src="../img/esports-trophy.jpg" alt="Ảnh chiếc cúp vô địch danh giá phát sáng dưới ánh đèn sân khấu">
+                    <figcaption class="item-content">
+                        <span class="item-category">Vinh quang</span>
+                        <h4 class="item-title">Đấu Trường Danh Vọng</h4>
+                    </figcaption>
+                </figure>
+
+                <figure class="portfolio-item">
+                    <img src="../img/tuyenthu.jpg" alt="Ảnh tuyển thủ cùng với cúp vô địch thế giới">
+                    <figcaption class="item-content">
+                        <span class="item-category">Huyền thoại</span>
+                        <h4 class="item-title">Hồ sơ Tuyển thủ chuyên nghiệp</h4>
+                    </figcaption>
+                </figure>
+
+                <figure class="portfolio-item">
+                    <img src="../img/giaidau.jpg" alt="Esports world cup">
+                    <figcaption class="item-content">
+                        <span class="item-category">Giải đấu</span>
+                        <h4 class="item-title">Esports World Cup Toàn Cầu</h4>
+                    </figcaption>
+                </figure>
+
             </div>
         </section>
 
@@ -115,56 +125,7 @@
             </div>
         </section>
 
-        <section class="section contact-section" id="contact">
-            <h2>Kết nối với EsportsZone</h2>
-            <p class="lead">Bạn muốn hợp tác, đóng góp bài viết hoặc gặp sự cố kỹ thuật? Hãy để lại thông tin bên dưới.</p>
-            
-            <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Họ và tên</label>
-                    <input type="text" id="name" name="name" placeholder="Ví dụ: Nguyễn Văn A" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Địa chỉ Email</label>
-                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Lời nhắn của bạn</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn tại đây..." required></textarea>
-                </div>
-                <button type="submit" class="primary-button submit-btn">Gửi tin nhắn ⚡</button>
-            </form>
-        </section>
-
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <div class="brand">EsportsZone<span>.</span></div>
-                <p>Nền tảng thông tin, dữ liệu và kết nối cộng đồng thể thao điện tử hàng đầu Việt Nam.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Chuyên mục</h4>
-                <a href="#hero">Trang chủ</a>
-                <a href="#about">Giới thiệu</a>
-                <a href="#features">Tính năng</a>
-                <a href="#portfolio">Thư viện</a>
-            </div>
-            <div class="footer-social">
-                <h4>Theo dõi chúng tôi</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook">🌐 Facebook</a>
-                    <a href="#" aria-label="YouTube">📺 YouTube</a>
-                    <a href="#" aria-label="Discord">💬 Discord</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 EsportsZone. Tất cả quyền được bảo lưu. Thiết kế giao diện bởi Cyber Magma Team.</p>
-            <a href="#top" class="back-to-top">Cuộn lên đầu trang ↑</a>
-        </div>
-    </footer>
 
 </body>
 </html>
